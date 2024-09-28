@@ -41,15 +41,12 @@ export default function LoginView() {
         noValidate
       >
         <div className="flex flex-col gap-5">
-          <label
-            className="font-normal text-2xl"
-          >Correo electrónico</label>
-
+          <label className="font-normal text-2xl">Correo electrónico</label>
           <input
+            className="w-full p-3 border-gray-300 border"
             id="email"
             type="email"
             placeholder="Ingrese su correo electrónico"
-            className="w-full p-3  border-gray-300 border"
             {...register("email", {
               required: "El Email es obligatorio",
               pattern: {
@@ -64,14 +61,11 @@ export default function LoginView() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <label
-            className="font-normal text-2xl"
-          >Contraseña</label>
-
+          <label className="font-normal text-2xl">Contraseña</label>
           <input
             type="password"
             placeholder="Ingrese su contraseña"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3 border-gray-300 border"
             {...register("password", {
               required: "El Password es obligatorio",
             })}
@@ -82,9 +76,9 @@ export default function LoginView() {
         </div>
 
         <input
+          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
           type="submit"
           value='Iniciar sesión'
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
         />
       </form>
 
